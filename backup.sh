@@ -1,8 +1,11 @@
 #!/bin/bash
 
 ### Simple Bash Backup by harmless-tech
+### Version: 2
 ### Git: https://github.com/harmless-tech/simple-bash-backup
 ### License: MIT (https://github.com/harmless-tech/simple-bash-backup/blob/main/LICENSE)
+
+echo "Simple Bash Backup by harmless-tech (v2)"
 
 # Script path
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -64,7 +67,7 @@ if [[ -z "$BACKUP_DRIVE_DIR" ]]; then
 fi
 echo "Done"
 
-echo "Mount drive..."
+echo "Mounting drive..."
 # Creates mount point for drive.
 if ! mkdir -p $BACKUP_DRIVE_MOUNT_PT; then
   echo "Could not create a mount point at '$BACKUP_DRIVE_MOUNT_PT'."
@@ -84,7 +87,7 @@ if ! mkdir -p $TAR_CACHE_DIR; then
   exit_umount
 fi
 # Removes old backups in cache.
-if ! rm -rf "$TAR_CACHE_DIR/*"; then
+if ! rm $TAR_CACHE_DIR/backup-*.tar.gz; then
   echo "Could not clear backup cache at '$TAR_CACHE_DIR'."
   exit_umount
 fi
