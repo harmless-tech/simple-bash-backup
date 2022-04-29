@@ -17,7 +17,7 @@ Create a 'settings.env' file in the folder where the backup script is, then add 
 ### Running
 - Make and fill out [settings.env](#configuration).
 - Run ```chmod +x backup.sh``` to allow the backup script to run
-- Run ```./backup.sh```
+- Run ```./backup.sh``` *Since mounting and unmounting drives usually requires root permissions you may need to run it with sudo.*
 
 ### Timed Backups
 For timed backups you should add it to crontab.
