@@ -1,6 +1,13 @@
 # Simple Bash backup
 A simple backup system for linux that compresses a folder into a tar and moves it to another drive.
 
+### Quick Setup
+Run the command below and then edit the settings.env file.
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/harmless-tech/simple-bash-backup/main/setup.sh | sh
+```
+*This does not setup a [cron job](#timed-backups).*
+
 ### Configuration
 Create a 'settings.env' file in the folder where the backup script is, then add the variables:
 
