@@ -87,7 +87,7 @@ if ! mkdir -p $TAR_CACHE_DIR; then
   exit_umount
 fi
 # Removes old backups in cache.
-if ! rm $TAR_CACHE_DIR/backup-*.tar.gz; then
+if ! rm -f $TAR_CACHE_DIR/backup-*.tar.gz; then
   echo "Could not clear backup cache at '$TAR_CACHE_DIR'."
   exit_umount
 fi
