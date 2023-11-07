@@ -1,11 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 ### Simple Bash Backup (Setup Script) by harmless-tech
-### Version: 1
+### Version: 2
 ### Git: https://github.com/harmless-tech/simple-bash-backup
 ### License: MIT (https://github.com/harmless-tech/simple-bash-backup/blob/main/LICENSE)
 
-echo "Simple Bash Backup (Setup Script) by harmless-tech (v1)"
+set -euxo pipefail
+
+echo "Simple Bash Backup (Setup Script) by harmless-tech (v2)"
 
 #
 BASE_URL="https://raw.githubusercontent.com/harmless-tech/simple-bash-backup/main"
@@ -60,7 +62,8 @@ if ! chmod --version > /dev/null 2>&1; then
 fi
 
 chmod +x "$TOP_DIR/backup.sh"
-#TODO: Utils
+
+#TODO: Util scripts
 
 echo "Finished installing Simple Bash Backup to $TOP_DIR."
 exit 0

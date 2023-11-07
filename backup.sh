@@ -1,11 +1,13 @@
 #!/bin/bash
 
 ### Simple Bash Backup by harmless-tech
-### Version: 2
+### Version: 3
 ### Git: https://github.com/harmless-tech/simple-bash-backup
 ### License: MIT (https://github.com/harmless-tech/simple-bash-backup/blob/main/LICENSE)
 
-echo "Simple Bash Backup by harmless-tech (v2)"
+set -euxo pipefail
+
+echo "Simple Bash Backup by harmless-tech (v3)"
 
 # Script path
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
