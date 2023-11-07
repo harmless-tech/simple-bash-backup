@@ -1,6 +1,8 @@
 # Simple Bash backup
 A simple backup system for linux that compresses a folder into a tar and moves it to another drive.
 
+**These scripts will no longer recieve any updates!**
+
 ### Quick Setup
 Run the command below and then edit the settings.env file.
 ```sh
